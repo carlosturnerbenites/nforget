@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "958497156154",
+    "firebase_url": "https://nforget-459b1.firebaseio.com",
+    "project_id": "nforget-459b1",
+    "storage_bucket": "nforget-459b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958497156154:android:8a0d5f1db93e180a",
+        "android_client_info": {
+          "package_name": "com.nforget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958497156154-47u6rpv744s42cloprkphu1e60tbpqci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZs9mT-GbEb6Q3D7wUnyEGhhMfoARgapo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

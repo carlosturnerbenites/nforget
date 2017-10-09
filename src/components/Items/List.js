@@ -11,7 +11,19 @@ import {
 
 import { Actions } from 'react-native-router-flux'
 
-import { H1, List, ListItem, Container, Header, Content } from 'native-base';
+import { 
+	H1,
+	List,
+	ListItem,
+	Container,
+	Header,
+	Footer,
+	Right,
+	Button,
+	Icon,
+	Content,
+	Text,
+} from 'native-base';
 
 // Componente de Item de paciente
 import Item from './Item'
@@ -26,9 +38,12 @@ export default class ItemsList extends Component {
 		};
 	}
 
-	handleItemPress(item) {
+	handleAddItem() {
+		Actions.addItem()
+	}
 
-		Actions.detail({ item })
+	handleItemPress(item) {
+		Actions.detailItem({ item })
 	}
 	
 	render() {
@@ -50,6 +65,17 @@ export default class ItemsList extends Component {
 						}
 					></List>
 				</Content>
+				<Footer transparent>
+					<Right>
+						<Button 
+							onPress={this.handleAddItem}
+							rounded
+							success
+						>
+							<Icon name='ios-add' />
+						</Button>
+					</Right>
+				</Footer>
 			</Container>
 		);
 	}

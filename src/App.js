@@ -25,13 +25,9 @@ import ItemsList from './components/Items/List';
 import LoginScene from './components/Scenes/Login';
 import HomeScene from './components/Scenes/Home';
 import itemDetailScene from './components/Items/Detail';
+import itemAddScene from './components/Items/Add';
 
 export default class App extends Component {
-
-	// Definir valor inicial del state
-	state = {
-		items: [{id:1,name: 'Boku no Hero'}]
-	}
 
 	render() {
 		return (
@@ -39,7 +35,8 @@ export default class App extends Component {
 				<Stack key="root" hideNavBar>
 					<Stack key="items">
 						<Scene key="home" component={HomeScene} />
-						<Scene key="detail" component={itemDetailScene} />
+						<Scene key="detailItem" component={itemDetailScene} />
+						<Scene key="addItem" component={itemAddScene} />
 					</Stack>
 					<Stack key="auth">
 						<Scene key="login" component={LoginScene} hideNavBar />

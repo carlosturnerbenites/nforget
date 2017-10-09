@@ -13,6 +13,7 @@ import {
 import { 
 	Text,
 	Card,
+	CardItem,
 	Left,
 	Body,
 	Right,
@@ -32,17 +33,19 @@ export default class Item extends Component {
 		const { img, name } = this.state.item
 		return (
 			<Card>
-				<Left>
-					<Image style={styles.img} source={{uri: img}}></Image>
-				</Left>
-				<Body>
-					<Text style={styles.name}>{ name } lorem</Text>
-				</Body>
-				<Right>
-					<Text note>3:43 pm</Text>
-				</Right>
-				<View>
-				</View>
+				<CardItem>
+					<Body>
+						<Left>
+							<Image style={styles.img} source={{uri: img}}></Image>
+						</Left>
+						<Body>
+							<Text style={styles.name}>{ name } lorem</Text>
+						</Body>
+						<Right>
+							<Text note>time</Text>
+						</Right>
+					</Body>
+				</CardItem>
 			</Card>
 		);
 	}

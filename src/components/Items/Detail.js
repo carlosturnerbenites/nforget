@@ -15,7 +15,7 @@ import {
 	Left,
 	Body,
 	Right,
-    Container,
+	Container,
 } from 'native-base';
 
 export default class Detail extends Component {
@@ -30,7 +30,6 @@ export default class Detail extends Component {
 
 	render() {
 		const { name } = this.state.item
-		console.warn(name)
 		return (
 			<Container>
 				<Left>
