@@ -9,7 +9,9 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { H1, List, Container, Header, Content } from 'native-base';
+import { Actions } from 'react-native-router-flux'
+
+import { H1, List, ListItem, Container, Header, Content } from 'native-base';
 
 // Componente de Item de paciente
 import Item from './Item'
@@ -23,9 +25,13 @@ export default class ItemsList extends Component {
 			items: props.items
 		};
 	}
-	/*
 
-		*/
+	handleItemPress(item) {
+		console.warn("click")
+		console.warn(Actions.currentScene)
+		Actions.detail({ item })
+	}
+	
 	render() {
 		return(
 			<Container>
@@ -36,10 +42,12 @@ export default class ItemsList extends Component {
 					<List
 						dataArray={this.state.items}
 						renderRow={(item) =>
-							<Item
-								item={item}
-								key={item.id.toString()}
-							/>
+							<ListItem onPress={() => this.handleItemPress(item)}>
+								<Item
+									item={item}
+									key={item.id.toString()}
+								/>
+							</ListItem>
 						}
 					></List>
 				</Content>

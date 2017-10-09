@@ -9,10 +9,22 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-import { Container, Header } from 'native-base';
+import {
+	Container,
+	Header
+} from 'native-base';
+
+import {
+	Router,
+	Stack,
+	Scene,
+} from 'react-native-router-flux';
 
 // Componenete Listado de Items
 import ItemsList from './components/Items/List';
+import LoginScene from './components/Scenes/Login';
+import HomeScene from './components/Scenes/Home';
+import itemDetailScene from './components/Items/Detail';
 
 export default class App extends Component {
 
@@ -22,14 +34,20 @@ export default class App extends Component {
 	}
 
 	render() {
-		const items = this.state.items
-
 		return (
-			<Container style={styles.container}>
-				{!items && <ActivityIndicator size="large" />}
-				{items && <ItemsList items={items} />}
-			</Container>
-		);
+			<Router>
+				<Stack key="root" hideNavBar>
+					<Stack key="items">
+						<Scene key="home" component={HomeScene} />
+						<Scene key="detail" component={itemDetailScene} />
+					</Stack>
+					<Stack key="auth">
+						<Scene key="login" component={LoginScene} hideNavBar />
+					</Stack>
+				</Stack>
+
+			</Router>
+		)
 	}
 };
 

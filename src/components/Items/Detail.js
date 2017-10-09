@@ -1,5 +1,5 @@
 /**
- * Componenete Item
+ * Componenete Item Detail
  */
 
 import React, { Component } from 'react';
@@ -15,9 +15,10 @@ import {
 	Left,
 	Body,
 	Right,
+    Container,
 } from 'native-base';
 
-export default class Item extends Component {
+export default class Detail extends Component {
 	constructor(props) {
 		super();
 
@@ -29,8 +30,9 @@ export default class Item extends Component {
 
 	render() {
 		const { name } = this.state.item
+		console.warn(name)
 		return (
-			<Card>
+			<Container>
 				<Left>
 					
 				</Left>
@@ -42,7 +44,7 @@ export default class Item extends Component {
 				</Right>
 				<View>
 				</View>
-			</Card>
+			</Container>
 		);
 	}
 }
