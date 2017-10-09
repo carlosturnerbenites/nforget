@@ -17,11 +17,19 @@ import {
 // Componenete Listado de Items
 import ItemsList from './../Items/List';
 
+import { getItems } from './../../apiClient'
+
+
 export default class Home extends Component {
 
 	// Definir valor inicial del state
 	state = {
-		items: [{id:1,name: 'Boku no Hero'}]
+		items: null, // [{id:1,name: 'Boku no Hero'}]
+	}
+
+	componentDidMount() {
+		getItems()
+			.then(items => this.setState({ items }) )
 	}
 
 	render() {

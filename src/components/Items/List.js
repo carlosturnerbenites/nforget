@@ -27,8 +27,7 @@ export default class ItemsList extends Component {
 	}
 
 	handleItemPress(item) {
-		console.warn("click")
-		console.warn(Actions.currentScene)
+
 		Actions.detail({ item })
 	}
 	

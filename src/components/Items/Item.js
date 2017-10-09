@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
+  Image,
 } from 'react-native';
 
 import { 
@@ -28,11 +29,11 @@ export default class Item extends Component {
 	}
 
 	render() {
-		const { name } = this.state.item
+		const { img, name } = this.state.item
 		return (
 			<Card>
 				<Left>
-					
+					<Image style={styles.img} source={{uri: img}}></Image>
 				</Left>
 				<Body>
 					<Text style={styles.name}>{ name } lorem</Text>
@@ -48,6 +49,10 @@ export default class Item extends Component {
 }
 
 const styles = StyleSheet.create({
+	img: {
+		width: 50,
+		height: 50,
+	},
 	name: {
 		color: 'gray',
 	}
