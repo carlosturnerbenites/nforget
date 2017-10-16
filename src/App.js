@@ -33,16 +33,15 @@ export default class App extends Component {
 		return (
 			<Router>
 				<Stack key="root" hideNavBar>
+					<Stack key="auth">
+						<Scene key="login" component={LoginScene} hideNavBar />
+					</Stack>
 					<Stack key="items">
 						<Scene key="home" component={HomeScene} />
 						<Scene key="detailItem" component={itemDetailScene} />
 						<Scene key="addItem" component={itemAddScene} />
 					</Stack>
-					<Stack key="auth">
-						<Scene key="login" component={LoginScene} hideNavBar />
-					</Stack>
 				</Stack>
-
 			</Router>
 		)
 	}

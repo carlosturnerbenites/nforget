@@ -19,7 +19,9 @@ export default class Login extends Component {
 
 	// Definir valor inicial del state
 	state = {}
-
+	mounted(){
+		console.log("lorem")
+	}
 	render() {
 		return (
 			<Container style={styles.container}>

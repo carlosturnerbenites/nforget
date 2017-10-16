@@ -1,13 +1,21 @@
 import { firebaseDatabase } from './firebase';
 
-function getRefItems(){
-    return firebaseDatabase.ref("items");
+function addItem(){
+    return firebaseDatabase.collection("items").add({
+        name: "Tokyo",
+        country: "Japan"
+    })
+}
+function getItems(){
+    console.log("que pasa")
+    return firebaseDatabase.collection("items").get();
 }
 
-function getItems(){
-    return getRefItems().once('value').then(snapshot => snapshot.val())
-}
+getItems()
+    .then(a => console.log(a))
+    .then(err => console.log(err))
 
 export {
-    getItems
+    getItems,
+    addItem,
 }

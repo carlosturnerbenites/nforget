@@ -28,13 +28,16 @@ export default class Home extends Component {
 	}
 
 	componentDidMount() {
+		console.log("hola")
 		getItems()
-			.then(items => this.setState({ items }) )
+			.then(items => {console.info(items);this.setState({ items })} )
+			.catch(err => console.error(err) );
 	}
 
 	render() {
 
 		const items = this.state.items
+		console.warn(items)
 
 		return (
 			<Container style={styles.container}>

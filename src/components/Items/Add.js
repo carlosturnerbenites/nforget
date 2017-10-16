@@ -20,6 +20,8 @@ import {
 	Content,
 } from 'native-base';
 
+import { addItem } from './../../apiClient'
+
 export default class Detail extends Component {
 	constructor(props) {
 		super();
@@ -29,7 +31,9 @@ export default class Detail extends Component {
 	}
 
 	handleSaveItem(){
-
+		addItem()
+			.then(item => {})
+			.catch(err => {});
 	}
 
 	render() {

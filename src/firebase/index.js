@@ -1,4 +1,6 @@
 import firebase from 'firebase';
+import 'firebase/firestore';
+
 import { apiKey, projectId, messagingSenderId } from './firebase.conf.json';
 
 const config = {
@@ -13,4 +15,5 @@ const config = {
 export default firebase.initializeApp(config);
 
 export const firebaseAuth = firebase.auth();
-export const firebaseDatabase = firebase.database();
+export const firebaseDatabase = firebase.firestore();
+
