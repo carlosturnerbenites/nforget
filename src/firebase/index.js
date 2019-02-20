@@ -1,16 +1,7 @@
 import firebase from 'firebase';
 import 'firebase/firestore';
 
-import { apiKey, projectId, messagingSenderId } from './firebase.conf.json';
-
-const config = {
-	apiKey,
-	authDomain: `${projectId}.firebaseapp.com`,
-	databaseURL: `https://${projectId}.firebaseio.com`,
-	projectId: `${projectId}`,
-	storageBucket: `${projectId}.appspot.com`,
-	messagingSenderId,
-};
+import config from './firebase.conf.json';
 
 export default firebase.initializeApp(config);
 

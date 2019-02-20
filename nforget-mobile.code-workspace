@@ -1,0 +1,96 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"editor.renderWhitespace": "all",
+		"editor.cursorStyle": "line",
+		"workbench.colorTheme": "Monokai",
+		"editor.multiCursorModifier": "ctrlCmd",
+		"editor.snippetSuggestions": "top",
+		// Controla si el editor debe formatear automáticamente el contenido pegado. Debe haber disponible un formateador capaz de aplicar formato a un intervalo dentro de un documento.
+		"editor.formatOnPaste": true,
+		"window.zoomLevel": 0,
+		"editor.autoClosingBrackets": true,
+		"editor.autoIndent": true,
+		// Controla si al copiar sin selección se copia la línea actual.
+		"editor.emptySelectionClipboard": true,
+		// Controla si el editor tiene habilitado el plegado de código.
+		"editor.folding": true,
+		"explorer.confirmDragAndDrop": false,
+		// Configura si se habilitan las sugerencias del lenguaje PHP integradas. La asistencia sugiere variables y opciones globales de PHP.
+		"php.suggest.basic": true,
+		// Habilita o deshabilita la validación integrada de PHP.
+		"php.validate.enable": true,
+		// Señala al ejecutable PHP.
+		"php.validate.executablePath": "/usr/bin/php",
+		// Indica si linter se ejecuta al guardar o al escribir.
+		"php.validate.run": "onSave",
+		"files.trimTrailingWhitespace": true,
+		"files.insertFinalNewline": true,
+		// Controla la visualización de números de línea. Los valores posibles son 'on', 'off' y 'relative'.
+		"editor.lineNumbers": "on",
+		// Controla si el editor debe detectar enlaces y hacerlos cliqueables
+		"editor.links": true,
+		// Resaltar corchetes coincidentes cuando se seleccione uno de ellos.
+		"editor.matchBrackets": true,
+		// Controla si se muestra el minimapa
+		"editor.minimap.enabled": true,
+		// Limitar el ancho del minimapa para presentar como mucho un número de columnas determinado
+		"editor.minimap.maxColumn": 120,
+		// Presentar los caracteres reales en una línea (por oposición a bloques de color)
+		"editor.minimap.renderCharacters": true,
+		// Controla si se oculta automáticamente el control deslizante del minimapa. Los valores posibles son "always" y "mouseover".
+		"editor.minimap.showSlider": "mouseover",
+		// Controla si las selecciones tienen esquinas redondeadas
+		// Caracteres que se usarán como separadores de palabras al realizar operaciones o navegaciones relacionadas con palabras.
+		"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?",
+		// Controla cómo se deben ajustar las líneas. Pueden ser:
+		//  - "off" (deshabilitar ajuste),
+		//  - "on" (ajuste de ventanilla),
+		//  - "wordWrapColumn" (ajustar en "editor.wordWrapColumn") o
+		//  - "bounded" (ajustar en la parte mínima de la ventanilla y "editor.wordWrapColumn").
+		"editor.wordWrap": "off",
+		// Controls the wrapping column of the editor when `editor.wordWrap` is 'wordWrapColumn' or 'bounded'.
+		"editor.wordWrapColumn": 80,
+		// Controla si Quick Open debe cerrarse automáticamente cuando pierde el foco.
+		"workbench.quickOpen.closeOnFocusLost": true,
+		// Controla qué editor se muestra al inicio, si no se restaura ninguno de la sesión anterior. Seleccione "none" para iniciar sin editor, "welcomePage" para abrir la página principal (opción predeterminada), "newUntitledFile" para abrir un archivo nuevo sin título (solo cuando se abre un área de trabajo vacía).
+		"workbench.startupEditor": "none",
+		"editor.roundedSelection": true,
+		"search.exclude": {
+			"**/vendor": true,
+			"**/node_modules": true,
+			"**/bower_components": true,
+			"**/public/dist": true,
+			"**/public/assets": true,
+			"**/public/css": true,
+			"**/public/js": true,
+			"**/public/fonts": true,
+			"**/public/img": true,
+		},
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"**/composer.lock": true,
+			"**/package-lock.json": true,
+			"**/rvm.sh": true,
+		},
+		"eslint.options": {
+			"extensions": [
+				".js",
+				".vue"
+			]
+		},
+		"eslint.validate": [
+			"javascript",
+			"vue"
+		],
+	}
+}
